@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboardcontroller;
+use App\Http\Controllers\skckcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,9 @@ Route::get('/app', function () {
     return view('admin.app');
 });
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('dashboard', [dashboardcontroller::class, 'index'])->name('dashboard');
+Route::get('/skck', [skckcontroller::class, 'index']);
