@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\dashboardcontroller;
-use App\Http\Controllers\skckcontroller;
+use App\Http\Controllers\Dashboardcontroller;
+use App\Http\Controllers\Skckcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/app', function () {
-    return view('admin.app');
-});
+// Route::get('/app', function () {
+//     return view('admin.app');
+// });
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('dashboard', [dashboardcontroller::class, 'index'])->name('dashboard');
-Route::get('/skck', [skckcontroller::class, 'index']);
+Route::get('/dashboard', [Dashboardcontroller::class, 'index'])->name('dashboard');
+Route::get('/skck', [Skckcontroller::class, 'index'])->name('skck');

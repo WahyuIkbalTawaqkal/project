@@ -13,14 +13,14 @@
     </head>
     <body class="sb-nav-fixed">
         @section('navbar')
-            @include('admin.nav')
+            @include('layouts.nav')
         @show
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         @section('slidebar')
-                            @include('admin.slidebar')
+                            @include('layouts.sidebar')
                         @show
                     </div>
                     <div class="sb-sidenav-footer">

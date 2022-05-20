@@ -1,49 +1,45 @@
-
-	@extends('admin.app')
-    @section('content')
-    
- 
-	<h3>Data SKCK</h3>
- 
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-	
-	<br/>
-	<br/>
- 
-	<table border="1">
-		<tr>
-			<th>Nik</th>
-			<th>Nama</th>
-			<th>Tempat Lahir</th>
-			<th>Tanggal Lahir</th>
-			<th>Agama</th>
-            <th>Pekerjaan</th>
-            <th>Status</th>
-            <th>Alamat</th>
-            <th>No KK</th>
-            <th>Keperluan</th>
-            <th>Yang Tanda Tangan</th>
-            
-		</tr>
-		@foreach($skck as $p)
-		<tr>
-			<td>{{ $p->Nama }}</td>
-			<td>{{ $p->Tempat_Lahir }}</td>
-            <td>{{ $p->Tanggal_Lahir }}</td>
-            <td>{{ $p->Agama }}</td>
-            <td>{{ $p->Pekerjaan }}</td>
-            <td>{{ $p->Status }}</td>
-            <td>{{ $p->Alamat }}</td>
-            <td>{{ $p->No_KK }}</td>
-            <td>{{ $p->Keperluan }}</td>
-            <td>{{ $p->Yang_Tanda_Tangan }}</td>
-			<td>
-				<a href="/skck/edit/{{ $p->id }}">Edit</a>
-				|
-				<a href="/skck/hapus/{{ $p->id }}">Hapus</a>
-			</td>
-		</tr>
-		@endforeach
-	</table>
- @endsection
- 
+@extends('layouts.apps')
+@section('content')
+<h1 class="mt-4">Dashboard</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Dashboard</li>
+</ol>
+<div class="row">
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-primary text-white mb-4">
+            <div class="card-body">Primary Card</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-warning text-white mb-4">
+            <div class="card-body">Warning Card</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white mb-4">
+            <div class="card-body">Success Card</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-danger text-white mb-4">
+            <div class="card-body">Danger Card</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
