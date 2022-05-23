@@ -11,6 +11,7 @@
 
 <table border="1">
     <tr>
+        <td>No</td>
         <th>Nik</th>
         <th>Nama</th>
         <th>Tempat Lahir</th>
@@ -24,24 +25,21 @@
         <th>Yang Tanda Tangan</th>
 
     </tr>
-    @foreach($skck as $p)
-    <tr>
-        <td>{{ $p->Nama }}</td>
-        <td>{{ $p->Tempat_Lahir }}</td>
-        <td>{{ $p->Tanggal_Lahir }}</td>
-        <td>{{ $p->Agama }}</td>
-        <td>{{ $p->Pekerjaan }}</td>
-        <td>{{ $p->Status }}</td>
-        <td>{{ $p->Alamat }}</td>
-        <td>{{ $p->No_KK }}</td>
-        <td>{{ $p->Keperluan }}</td>
-        <td>{{ $p->Yang_Tanda_Tangan }}</td>
-        <td>
-            <a href="/skck/edit/{{ $p->id }}">Edit</a>
-            |
-            <a href="/skck/hapus/{{ $p->id }}">Hapus</a>
-        </td>
-    </tr>
-    @endforeach
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2323</td>
+            <td>Tes</td>
+            <td>Sumenep</td>
+            <td>sasa</td>
+            <td>sas</td>
+            <td>sas</td>
+            <td>sas</td>
+            <td>sas</td>
+            <td>sas</td>
+            <td>sas</td>
+            <td>sas</td>
+        </tr>
+    </tbody>
 </table>
 @endsection
